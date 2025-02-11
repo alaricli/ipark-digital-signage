@@ -20,7 +20,7 @@ export const WeatherProvider = ({ children }: { children: ReactNode }) => {
     const fetchData = async () => {
       try {
         const weatherApiResponse = await fetch(
-          `http://api.weatherapi.com/v1/current.json?key=${process.env.NEXT_PUBLIC_WEATHERAPI_KEY}&q=Foshan&aqi=yes&lang=zh_cmn`
+          `https://api.weatherapi.com/v1/current.json?key=${process.env.NEXT_PUBLIC_WEATHERAPI_KEY}&q=Foshan&aqi=yes&lang=zh_cmn`
         );
 
         if (!weatherApiResponse) {
