@@ -1,13 +1,12 @@
-import Image from "next/image";
 import { useWeather } from "../context/WeatherContext";
 import { useEffect, useState } from "react";
 import { getWeatherEmoji } from "../util/weatherEmojiMap";
 
 export default function TodayWidget() {
   const { weatherApiData } = useWeather();
-  const imageUrl = weatherApiData?.current?.condition?.icon
-    ? `https:${weatherApiData?.current.condition.icon}`
-    : "/Empty.png";
+  // const imageUrl = weatherApiData?.current?.condition?.icon
+  // ? `https:${weatherApiData?.current.condition.icon}`
+  // : "/Empty.png";
   const [time, setTime] = useState<string | null>(null);
   const [date, setDate] = useState<string | null>(null);
   const [weekday, setWeekday] = useState<string | null>(null);
